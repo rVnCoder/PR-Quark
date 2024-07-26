@@ -1,0 +1,4543 @@
+{
+    "md5": "34efc3ebf51a6511c0d12cce7592db73",
+    "apk_filename": "Roaming_Mantis.apk",
+    "size_bytes": 361027,
+    "threat_level": "Moderate Risk",
+    "total_score": 211,
+    "crimes": [
+        {
+            "rule": "00001.json",
+            "crime": "Initialize bitmap object and compress data (e.g. JPEG) into bitmap object",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00002.json",
+            "crime": "Open the camera and take picture",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00003.json",
+            "crime": "Put the compressed bitmap data into JSON object",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00004.json",
+            "crime": "Get filename and put it to JSON object",
+            "label": [
+                "file",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00005.json",
+            "crime": "Get absolute path of file and put it to JSON object",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00006.json",
+            "crime": "Scheduling recording task",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00007.json",
+            "crime": "Use absolute path of directory for the output media file path",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00008.json",
+            "crime": "Check if successfully sending out SMS",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Boolean;",
+                    "method": "valueOf",
+                    "descriptor": "(Z)Ljava/lang/Boolean;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00009.json",
+            "crime": "Put data in cursor to JSON object",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00010.json",
+            "crime": "Read sensitive data(SMS, CALLLOG) and put it into JSON object",
+            "label": [
+                "sms",
+                "calllog",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00011.json",
+            "crime": "Query data from URI (SMS, CALLLOGS)",
+            "label": [
+                "sms",
+                "calllog",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00012.json",
+            "crime": "Read data and put it into a buffer stream",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00013.json",
+            "crime": "Read file and put it into a stream",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "<init>",
+                    "descriptor": "(Ljava/lang/String;)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00014.json",
+            "crime": "Read file into a stream and put it into a JSON object",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00015.json",
+            "crime": "Put buffer stream (data) to JSON object",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00016.json",
+            "crime": "Get location info of the device and put it to JSON object",
+            "label": [
+                "location",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00017.json",
+            "crime": "Get Location of the device and append this info to a string",
+            "label": [
+                "location",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00018.json",
+            "crime": "Get JSON object prepared and fill in location info",
+            "label": [
+                "location",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00019.json",
+            "crime": "Find a method from given class name, usually for reflection",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Object;",
+                    "method": "getClass",
+                    "descriptor": "()Ljava/lang/Class;"
+                },
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getMethod",
+                    "descriptor": "(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Ljava/lang/Object;",
+                    "method": "getClass",
+                    "descriptor": "()Ljava/lang/Class;"
+                },
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getMethod",
+                    "descriptor": "(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/a$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+                        ],
+                        "first_hex": "6e 10 7d 00 00 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "second_hex": "6e 30 77 00 20 03"
+                    }
+                },
+                {
+                    "Lcom/sbddl/gfAdminReceiver$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+                        ],
+                        "first_hex": "6e 10 7d 00 00 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v1",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "second_hex": "6e 30 77 00 21 03"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/a$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+                        ],
+                        "first_hex": "6e 10 7d 00 00 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "second_hex": "6e 30 77 00 20 03"
+                    }
+                },
+                {
+                    "Lcom/sbddl/gfAdminReceiver$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "Ljava/lang/Object;->getClass()Ljava/lang/Class;"
+                        ],
+                        "first_hex": "6e 10 7d 00 00 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v1",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "second_hex": "6e 30 77 00 21 03"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00020.json",
+            "crime": "Get absolute path of the file and store in string",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "toString",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "toString",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/io/File;->getAbsolutePath()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 6e 00 01 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+                        ],
+                        "second_hex": "6e 10 81 00 00 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/io/File;->getAbsolutePath()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 6e 00 01 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+                        ],
+                        "second_hex": "6e 10 81 00 00 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00021.json",
+            "crime": "Load additional DEX files dynamically",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/lang/ClassLoader;",
+                    "method": "loadClass",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Class;"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/lang/ClassLoader;",
+                    "method": "loadClass",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Class;"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/io/File;->getAbsolutePath()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 6e 00 01 00",
+                        "second": [
+                            "invoke-direct",
+                            "v7",
+                            "v2",
+                            "v1",
+                            "Lcom/svsd/hsMyApplication;->a(Ljava/lang/String; Ljava/lang/String;)V"
+                        ],
+                        "second_hex": "70 30 61 00 27 01"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/io/File;->getAbsolutePath()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 6e 00 01 00",
+                        "second": [
+                            "invoke-direct",
+                            "v7",
+                            "v2",
+                            "v1",
+                            "Lcom/svsd/hsMyApplication;->a(Ljava/lang/String; Ljava/lang/String;)V"
+                        ],
+                        "second_hex": "70 30 61 00 27 01"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00022.json",
+            "crime": "Open a file from given absolute path of the file",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "<init>",
+                    "descriptor": "(Ljava/lang/String;)V"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "<init>",
+                    "descriptor": "(Ljava/lang/String;)V"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/io/File;->getAbsolutePath()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 6e 00 01 00",
+                        "second": [
+                            "invoke-direct",
+                            "v0",
+                            "v2",
+                            "Ljava/io/File;-><init>(Ljava/lang/String;)V"
+                        ],
+                        "second_hex": "70 20 6b 00 20 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/io/File;->getAbsolutePath()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 6e 00 01 00",
+                        "second": [
+                            "invoke-direct",
+                            "v0",
+                            "v2",
+                            "Ljava/io/File;-><init>(Ljava/lang/String;)V"
+                        ],
+                        "second_hex": "70 20 6b 00 20 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00023.json",
+            "crime": "Start another application from current application",
+            "label": [
+                "reflection",
+                "control"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/pm/PackageManager;",
+                    "method": "getLaunchIntentForPackage",
+                    "descriptor": "(Ljava/lang/String;)Landroid/content/Intent;"
+                },
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "startActivity",
+                    "descriptor": "(Landroid/content/Intent;)V"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Landroid/content/pm/PackageManager;",
+                    "method": "getLaunchIntentForPackage",
+                    "descriptor": "(Ljava/lang/String;)Landroid/content/Intent;"
+                },
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "startActivity",
+                    "descriptor": "(Landroid/content/Intent;)V"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/sbddl/gfAdminReceiver; onDisableRequested (Landroid/content/Context; Landroid/content/Intent;)Ljava/lang/CharSequence;": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;"
+                        ],
+                        "first_hex": "6e 20 2a 00 10 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v3",
+                            "v0",
+                            "Landroid/content/Context;->startActivity(Landroid/content/Intent;)V"
+                        ],
+                        "second_hex": "6e 20 1b 00 03 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/sbddl/gfAdminReceiver; onDisableRequested (Landroid/content/Context; Landroid/content/Intent;)Ljava/lang/CharSequence;": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;"
+                        ],
+                        "first_hex": "6e 20 2a 00 10 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v3",
+                            "v0",
+                            "Landroid/content/Context;->startActivity(Landroid/content/Intent;)V"
+                        ],
+                        "second_hex": "6e 20 1b 00 03 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00024.json",
+            "crime": "Write file after Base64 decoding",
+            "label": [
+                "reflection",
+                "file"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/util/Base64;",
+                    "method": "decode",
+                    "descriptor": "([B I)[B"
+                },
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Landroid/util/Base64;",
+                    "method": "decode",
+                    "descriptor": "([B I)[B"
+                },
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-static",
+                            "v0",
+                            "v2",
+                            "Landroid/util/Base64;->decode([B I)[B"
+                        ],
+                        "first_hex": "71 20 2f 00 20 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v2",
+                            "v0",
+                            "Ljava/io/FileOutputStream;->write([B)V"
+                        ],
+                        "second_hex": "6e 20 72 00 02 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-static",
+                            "v0",
+                            "v2",
+                            "Landroid/util/Base64;->decode([B I)[B"
+                        ],
+                        "first_hex": "71 20 2f 00 20 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v2",
+                            "v0",
+                            "Ljava/io/FileOutputStream;->write([B)V"
+                        ],
+                        "second_hex": "6e 20 72 00 02 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00025.json",
+            "crime": "Monitor the general action to be performed",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Intent;",
+                    "method": "getAction",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/lang/String;",
+                    "method": "equals",
+                    "descriptor": "(Ljava/lang/Object;)Z"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Landroid/content/Intent;",
+                    "method": "getAction",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/lang/String;",
+                    "method": "equals",
+                    "descriptor": "(Ljava/lang/Object;)Z"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/wufsd/erMyReceiver; onReceive (Landroid/content/Context; Landroid/content/Intent;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v5",
+                            "Landroid/content/Intent;->getAction()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 21 00 05 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+                        ],
+                        "second_hex": "6e 20 7e 00 10 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/wufsd/erMyReceiver; onReceive (Landroid/content/Context; Landroid/content/Intent;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v5",
+                            "Landroid/content/Intent;->getAction()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 21 00 05 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Ljava/lang/String;->equals(Ljava/lang/Object;)Z"
+                        ],
+                        "second_hex": "6e 20 7e 00 10 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00026.json",
+            "crime": "Method reflection",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getMethod",
+                    "descriptor": "(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                },
+                {
+                    "class": "Ljava/lang/reflect/Method;",
+                    "method": "invoke",
+                    "descriptor": "(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getMethod",
+                    "descriptor": "(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                },
+                {
+                    "class": "Ljava/lang/reflect/Method;",
+                    "method": "invoke",
+                    "descriptor": "(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/dhgod/fsMainService; a ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 21 03",
+                        "second": [
+                            "invoke-virtual",
+                            "v1",
+                            "v0",
+                            "v2",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 01 02"
+                    }
+                },
+                {
+                    "Lcom/a$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 20 03",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 20 03"
+                    }
+                },
+                {
+                    "Lcom/sbddl/gfAdminReceiver$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 21 03",
+                        "second": [
+                            "invoke-virtual",
+                            "v1",
+                            "v0",
+                            "v2",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 01 02"
+                    }
+                },
+                {
+                    "Lcom/svsd/hsMyApplication; a (Ljava/lang/String; Ljava/lang/String;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "v2",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 10 02",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "v2",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 10 02"
+                    }
+                },
+                {
+                    "Lcom/dhgod/fsMainService; onStartCommand (Landroid/content/Intent; I I)I": {
+                        "first": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "v5",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 43 05",
+                        "second": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "v5",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 43 05"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/dhgod/fsMainService; a ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 21 03",
+                        "second": [
+                            "invoke-virtual",
+                            "v1",
+                            "v0",
+                            "v2",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 01 02"
+                    }
+                },
+                {
+                    "Lcom/a$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 20 03",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 20 03"
+                    }
+                },
+                {
+                    "Lcom/sbddl/gfAdminReceiver$1; run ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "v2",
+                            "v3",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 21 03",
+                        "second": [
+                            "invoke-virtual",
+                            "v1",
+                            "v0",
+                            "v2",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 01 02"
+                    }
+                },
+                {
+                    "Lcom/svsd/hsMyApplication; a (Ljava/lang/String; Ljava/lang/String;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "v2",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 10 02",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "v2",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 10 02"
+                    }
+                },
+                {
+                    "Lcom/dhgod/fsMainService; onStartCommand (Landroid/content/Intent; I I)I": {
+                        "first": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "v5",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "first_hex": "6e 30 77 00 43 05",
+                        "second": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "v5",
+                            "Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 30 89 00 43 05"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00027.json",
+            "crime": "Get specific method from other Dex files",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/ClassLoader;",
+                    "method": "loadClass",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Class;"
+                },
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getMethod",
+                    "descriptor": "(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Ljava/lang/ClassLoader;",
+                    "method": "loadClass",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Class;"
+                },
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getMethod",
+                    "descriptor": "(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; a (Ljava/lang/String; Ljava/lang/String;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+                        ],
+                        "first_hex": "6e 20 7a 00 10 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "v2",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "second_hex": "6e 30 77 00 10 02"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; a (Ljava/lang/String; Ljava/lang/String;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+                        ],
+                        "first_hex": "6e 20 7a 00 10 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "v2",
+                            "Ljava/lang/Class;->getMethod(Ljava/lang/String; [Ljava/lang/Class;)Ljava/lang/reflect/Method;"
+                        ],
+                        "second_hex": "6e 30 77 00 10 02"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00028.json",
+            "crime": "Read file from assets directory",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/res/AssetManager;",
+                    "method": "open",
+                    "descriptor": "(Ljava/lang/String;)Ljava/io/InputStream;"
+                },
+                {
+                    "class": "Ljava/io/InputStream;",
+                    "method": "read",
+                    "descriptor": "([B)I"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Landroid/content/res/AssetManager;",
+                    "method": "open",
+                    "descriptor": "(Ljava/lang/String;)Ljava/io/InputStream;"
+                },
+                {
+                    "class": "Ljava/io/InputStream;",
+                    "method": "read",
+                    "descriptor": "([B)I"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v2",
+                            "v3",
+                            "Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;"
+                        ],
+                        "first_hex": "6e 20 2c 00 32 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v2",
+                            "v3",
+                            "Ljava/io/InputStream;->read([B)I"
+                        ],
+                        "second_hex": "6e 20 74 00 32 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v2",
+                            "v3",
+                            "Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;"
+                        ],
+                        "first_hex": "6e 20 2c 00 32 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v2",
+                            "v3",
+                            "Ljava/io/InputStream;->read([B)I"
+                        ],
+                        "second_hex": "6e 20 74 00 32 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00029.json",
+            "crime": "Initialize class object dynamically",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/reflect/Constructor;",
+                    "method": "newInstance",
+                    "descriptor": "([Ljava/lang/Object;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00030.json",
+            "crime": "Connect to the remote server through the given URL",
+            "label": [
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00031.json",
+            "crime": "Check the list of currently running applications",
+            "label": [
+                "reflection",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00032.json",
+            "crime": "Load external class",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/ClassLoader;",
+                    "method": "loadClass",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Class;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00033.json",
+            "crime": "Query the IMEI number",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00034.json",
+            "crime": "Query the current data network type",
+            "label": [
+                "collection",
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00035.json",
+            "crime": "Query the list of the installed packages",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getPackageManager",
+                    "descriptor": "()Landroid/content/pm/PackageManager;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00036.json",
+            "crime": "Get resource file from res/raw directory",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00037.json",
+            "crime": "Send notification",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/app/Notification$Builder;",
+                    "method": "build",
+                    "descriptor": "()Landroid/app/Notification;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00038.json",
+            "crime": "Query the phone number",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00039.json",
+            "crime": "Start a web server",
+            "label": [
+                "control",
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00040.json",
+            "crime": "Send SMS",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00041.json",
+            "crime": "Save recorded audio/video to file",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00042.json",
+            "crime": "Query WiFi BSSID and scan results",
+            "label": [
+                "collection",
+                "wifi"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00043.json",
+            "crime": "Calculate WiFi signal strength",
+            "label": [
+                "collection",
+                "wifi"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00044.json",
+            "crime": "Query the last time this package's activity was used",
+            "label": [
+                "collection",
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00045.json",
+            "crime": "Query the name of currently running application",
+            "label": [
+                "collection",
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00046.json",
+            "crime": "Method reflection",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/reflect/Method;",
+                    "method": "invoke",
+                    "descriptor": "(Ljava/lang/Object; [Ljava/lang/Object;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00047.json",
+            "crime": "Query the local IP address",
+            "label": [
+                "network",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00048.json",
+            "crime": "Query the SMS contents",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00049.json",
+            "crime": "Query the phone number from SMS sender",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00050.json",
+            "crime": "Query the SMS service centre timestamp",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00051.json",
+            "crime": "Implicit intent(view a web page, make a phone call, etc.) via setData",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00052.json",
+            "crime": "Deletes media specified by a content URI(SMS, CALL_LOG, File, etc.)",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00053.json",
+            "crime": "Monitor data identified by a given content URI changes(SMS, MMS, etc.)",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00054.json",
+            "crime": "Install other APKs from file",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00055.json",
+            "crime": "Query the SMS content and the source of the phone number",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00056.json",
+            "crime": "Modify voice volume",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00057.json",
+            "crime": "Return the DHCP-assigned addresses from the last successful DHCP request",
+            "label": [
+                "network",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "toString",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00058.json",
+            "crime": "Connect to the specific WIFI network",
+            "label": [
+                "wifi",
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00059.json",
+            "crime": "Query the SIM card status",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00060.json",
+            "crime": "Query the network operator name",
+            "label": [
+                "network",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00061.json",
+            "crime": "Return dynamic information about the current Wi-Fi connection",
+            "label": [
+                "wifi",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00062.json",
+            "crime": "Query WiFi information and WiFi Mac Address",
+            "label": [
+                "wifi",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00063.json",
+            "crime": "Implicit intent(view a web page, make a phone call, etc.)",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00064.json",
+            "crime": "Monitor incoming call status",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00065.json",
+            "crime": "Get the country code of the SIM card provider",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00066.json",
+            "crime": "Query the ICCID number",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00067.json",
+            "crime": "Query the IMSI number",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00068.json",
+            "crime": "Executes the specified string Linux command",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00069.json",
+            "crime": "Run shell script programmably",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00070.json",
+            "crime": "Get sender's address and send SMS",
+            "label": [
+                "collection",
+                "command",
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00071.json",
+            "crime": "Write the ISO country code of the current network operator into a file",
+            "label": [
+                "collection",
+                "command",
+                "network",
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00072.json",
+            "crime": "Write HTTP input stream into a file",
+            "label": [
+                "command",
+                "network",
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00073.json",
+            "crime": "Write the SIM card information into a file",
+            "label": [
+                "collection",
+                "telephony",
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00074.json",
+            "crime": "Get IMSI and the ISO country code",
+            "label": [
+                "collection",
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00075.json",
+            "crime": "Get location of the device",
+            "label": [
+                "collection",
+                "location"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00076.json",
+            "crime": "Get the current WiFi information and put it into JSON",
+            "label": [
+                "collection",
+                "wifi"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00077.json",
+            "crime": "Read sensitive data(SMS, CALLLOG, etc)",
+            "label": [
+                "collection",
+                "sms",
+                "calllog",
+                "calendar"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00078.json",
+            "crime": "Get the network operator name",
+            "label": [
+                "collection",
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00079.json",
+            "crime": "Hide the current app's icon",
+            "label": [
+                "evasion"
+            ],
+            "score": 1,
+            "weight": 0.25,
+            "confidence": "60%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getPackageManager",
+                    "descriptor": "()Landroid/content/pm/PackageManager;"
+                },
+                {
+                    "class": "Landroid/content/pm/PackageManager;",
+                    "method": "setComponentEnabledSetting",
+                    "descriptor": "(Landroid/content/ComponentName; I I)V"
+                }
+            ],
+            "combination": [
+                {
+                    "descriptor": "()Landroid/content/pm/PackageManager;",
+                    "class": "Landroid/content/Context;",
+                    "method": "getPackageManager"
+                },
+                {
+                    "descriptor": "(Landroid/content/ComponentName; I I)V",
+                    "class": "Landroid/content/pm/PackageManager;",
+                    "method": "setComponentEnabledSetting"
+                }
+            ],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00080.json",
+            "crime": "Save recorded audio/video to a file",
+            "label": [
+                "record",
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00081.json",
+            "crime": "Get declared method from given method name",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "<init>",
+                    "descriptor": "()V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00082.json",
+            "crime": "Get the current WiFi MAC address",
+            "label": [
+                "collection",
+                "wifi"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00083.json",
+            "crime": "Query the IMEI number",
+            "label": [
+                "collection",
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00084.json",
+            "crime": "Get the ISO country code and IMSI",
+            "label": [
+                "collection",
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00085.json",
+            "crime": "Get the ISO country code and put it into JSON",
+            "label": [
+                "collection",
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00086.json",
+            "crime": "Check if the device is in data roaming mode",
+            "label": [
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00087.json",
+            "crime": "Check the current network type",
+            "label": [
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00088.json",
+            "crime": "Create a secure socket connection to the given host address",
+            "label": [
+                "command",
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00089.json",
+            "crime": "Connect to a URL and receive input stream from the server",
+            "label": [
+                "command",
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00090.json",
+            "crime": "Set recroded audio/video file format",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00091.json",
+            "crime": "Retrieve data from broadcast",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00092.json",
+            "crime": "Send broadcast",
+            "label": [
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00093.json",
+            "crime": "Get the content of SMS and forward it to others via SMS",
+            "label": [
+                "collection",
+                "sms",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00094.json",
+            "crime": "Connect to a URL and read data from it",
+            "label": [
+                "command",
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/InputStream;",
+                    "method": "read",
+                    "descriptor": "([B)I"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00095.json",
+            "crime": "Write the ICCID of device into a file",
+            "label": [
+                "collection",
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00096.json",
+            "crime": "Connect to a URL and set request method",
+            "label": [
+                "command",
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00097.json",
+            "crime": "Get the sender address of the SMS and put it into JSON",
+            "label": [
+                "collection",
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00098.json",
+            "crime": "Check if the network is connected",
+            "label": [
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00099.json",
+            "crime": "Get location of the current GSM and put it into JSON",
+            "label": [
+                "collection",
+                "location"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00100.json",
+            "crime": "Check the network capabilities",
+            "label": [
+                "collection",
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00101.json",
+            "crime": "Initialize recorder",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00102.json",
+            "crime": "Set the phone speaker on",
+            "label": [
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00103.json",
+            "crime": "Check the active network type",
+            "label": [
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00104.json",
+            "crime": "Check if the given path is directory",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00105.json",
+            "crime": "Append the sender's address to the string",
+            "label": [
+                "collection",
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "append",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00106.json",
+            "crime": "Get the currently formatted WiFi IP address",
+            "label": [
+                "collection",
+                "wifi"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00107.json",
+            "crime": "Write the IMSI number into a file",
+            "label": [
+                "collection",
+                "telephony",
+                "file",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00108.json",
+            "crime": "Read the input stream from given URL",
+            "label": [
+                "network",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/InputStream;",
+                    "method": "read",
+                    "descriptor": "([B)I"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00109.json",
+            "crime": "Connect to a URL and get the response code",
+            "label": [
+                "network",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00110.json",
+            "crime": "Query the ICCID number",
+            "label": [
+                "collection",
+                "telephony"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00111.json",
+            "crime": "Get the sender address of the SMS",
+            "label": [
+                "collection",
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00112.json",
+            "crime": "Get the date of the calendar event",
+            "label": [
+                "collection",
+                "calendar"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00113.json",
+            "crime": "Get location and put it into JSON",
+            "label": [
+                "collection",
+                "location"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00114.json",
+            "crime": "Create a secure socket connection to the proxy address",
+            "label": [
+                "network",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00115.json",
+            "crime": "Get last known location of the device",
+            "label": [
+                "collection",
+                "location"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00116.json",
+            "crime": "Get the current WiFi MAC address and put it into JSON",
+            "label": [
+                "wifi",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00117.json",
+            "crime": "Get the IMSI and network operator name",
+            "label": [
+                "telephony",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00118.json",
+            "crime": "Check if the content of SMS contains given string",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00119.json",
+            "crime": "Write the IMEI number into a file",
+            "label": [
+                "collection",
+                "file",
+                "telephony",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00120.json",
+            "crime": "Append the sender's address to the string",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00121.json",
+            "crime": "Create a directory",
+            "label": [
+                "file",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "mkdirs",
+                    "descriptor": "()Z"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00122.json",
+            "crime": "Check if the sender address of SMS contains the given string",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00123.json",
+            "crime": "Save the response to JSON after connecting to the remote server",
+            "label": [
+                "network",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00124.json",
+            "crime": "Check the current active network type",
+            "label": [
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00125.json",
+            "crime": "Check if the given file path exist",
+            "label": [
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "exists",
+                    "descriptor": "()Z"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00126.json",
+            "crime": "Read sensitive data(SMS, CALLLOG, etc)",
+            "label": [
+                "collection",
+                "sms",
+                "calllog",
+                "calendar"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00127.json",
+            "crime": "Monitor the broadcast action events (BOOT_COMPLETED, etc)",
+            "label": [
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Intent;",
+                    "method": "getAction",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00128.json",
+            "crime": "Query user account information",
+            "label": [
+                "collection",
+                "account"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00129.json",
+            "crime": "Get the content of SMS",
+            "label": [
+                "sms",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00130.json",
+            "crime": "Get the current WIFI information",
+            "label": [
+                "wifi",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00131.json",
+            "crime": "Get location of the current GSM and put it into JSON",
+            "label": [
+                "collection",
+                "location"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00132.json",
+            "crime": "Query The ISO country code",
+            "label": [
+                "telephony",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00133.json",
+            "crime": "Start recording",
+            "label": [
+                "record",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00134.json",
+            "crime": "Get the current WiFi IP address",
+            "label": [
+                "wifi",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00135.json",
+            "crime": "Get the current WiFi id and put it into JSON.",
+            "label": [
+                "wifi",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00136.json",
+            "crime": "Stop recording",
+            "label": [
+                "record",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00137.json",
+            "crime": "Get last known location of the device",
+            "label": [
+                "location",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00138.json",
+            "crime": "Set the audio source (MIC)",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00139.json",
+            "crime": "Get the current WiFi id",
+            "label": [
+                "collection",
+                "wifi"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00140.json",
+            "crime": "Write the phone number into a file",
+            "label": [
+                "collection",
+                "telephony",
+                "file",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00141.json",
+            "crime": "Load class from given class name",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "toString",
+                    "descriptor": "()Ljava/lang/String;"
+                },
+                {
+                    "class": "Ljava/lang/ClassLoader;",
+                    "method": "loadClass",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Class;"
+                }
+            ],
+            "combination": [
+                {
+                    "descriptor": "()Ljava/lang/String;",
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "toString"
+                },
+                {
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Class;",
+                    "class": "Ljava/lang/ClassLoader;",
+                    "method": "loadClass"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; a (Ljava/lang/String; Ljava/lang/String;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 81 00 01 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+                        ],
+                        "second_hex": "6e 20 7a 00 10 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; a (Ljava/lang/String; Ljava/lang/String;)V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v1",
+                            "Ljava/lang/StringBuilder;->toString()Ljava/lang/String;"
+                        ],
+                        "first_hex": "6e 10 81 00 01 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v0",
+                            "v1",
+                            "Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;"
+                        ],
+                        "second_hex": "6e 20 7a 00 10 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00142.json",
+            "crime": "Get calendar information",
+            "label": [
+                "collection",
+                "calendar"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "append",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00143.json",
+            "crime": "Get external class from given path or file name",
+            "label": [
+                "reflection"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "toString",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00144.json",
+            "crime": "Write SIM card serial number into a file",
+            "label": [
+                "collection",
+                "telephony",
+                "file",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/FileOutputStream;",
+                    "method": "write",
+                    "descriptor": "([B)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00145.json",
+            "crime": "Create a socket connection to the proxy address",
+            "label": [
+                "network",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00146.json",
+            "crime": "Get the network operator name and IMSI",
+            "label": [
+                "telephony",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00147.json",
+            "crime": "Get the time of current location",
+            "label": [
+                "collection",
+                "location"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00148.json",
+            "crime": "Create a socket connection to the given host address",
+            "label": [
+                "network",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00149.json",
+            "crime": "Unpack an asset, possibly decrypt it and load it as DEX",
+            "label": [
+                "packer"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00150.json",
+            "crime": "Send IMSI over Internet",
+            "label": [
+                "phone"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [
+                "android.permission.INTERNET"
+            ],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00151.json",
+            "crime": "Send phone number over Internet",
+            "label": [
+                "phone",
+                "privacy"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [
+                "android.permission.INTERNET"
+            ],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00152.json",
+            "crime": "Get data from HTTP and send SMS",
+            "label": [
+                "command",
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [
+                "android.permission.INTERNET"
+            ],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00153.json",
+            "crime": "Send binary data over HTTP",
+            "label": [
+                "http"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [
+                "android.permission.INTERNET"
+            ],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00154.json",
+            "crime": "Connect hostname to TCP or UDP socket using KryoNet",
+            "label": [
+                "socket"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00155.json",
+            "crime": "Execute commands on shell using DataOutputStream object",
+            "label": [
+                "exec",
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00156.json",
+            "crime": "Acquire lock on Power Manager ",
+            "label": [
+                "lock",
+                "power manager"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [
+                "android.permission.WAKE_LOCK"
+            ],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00157.json",
+            "crime": "Instantiate new object using reflection, possibly used for dexClassLoader ",
+            "label": [
+                "reflection",
+                "dexClassLoader"
+            ],
+            "score": 1,
+            "weight": 1.0,
+            "confidence": "100%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getConstructor",
+                    "descriptor": "([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;"
+                },
+                {
+                    "class": "Ljava/lang/reflect/Constructor;",
+                    "method": "newInstance",
+                    "descriptor": "([Ljava/lang/Object;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [
+                {
+                    "class": "Ljava/lang/Class;",
+                    "method": "getConstructor",
+                    "descriptor": "([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;"
+                },
+                {
+                    "class": "Ljava/lang/reflect/Constructor;",
+                    "method": "newInstance",
+                    "descriptor": "([Ljava/lang/Object;)Ljava/lang/Object;"
+                }
+            ],
+            "sequence": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;"
+                        ],
+                        "first_hex": "6e 20 76 00 43 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 20 88 00 43 00"
+                    }
+                }
+            ],
+            "register": [
+                {
+                    "Lcom/svsd/hsMyApplication; onCreate ()V": {
+                        "first": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;"
+                        ],
+                        "first_hex": "6e 20 76 00 43 00",
+                        "second": [
+                            "invoke-virtual",
+                            "v3",
+                            "v4",
+                            "Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;"
+                        ],
+                        "second_hex": "6e 20 88 00 43 00"
+                    }
+                }
+            ]
+        },
+        {
+            "rule": "00158.json",
+            "crime": "Connect to a URL and send sensitive data got from resolver",
+            "label": [
+                "privacy",
+                "connection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00159.json",
+            "crime": "Use accessibility service to perform action getting node info by text",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00160.json",
+            "crime": "Use accessibility service to perform action getting node info by View Id",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00161.json",
+            "crime": "Perfom accessibility service action on accessibility node info",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00162.json",
+            "crime": "Create InetSocketAddress object and connecting to it",
+            "label": [
+                "socket"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00163.json",
+            "crime": "Create new Socket and connecting to it",
+            "label": [
+                "socket"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00164.json",
+            "crime": "Get SMS address and send it through http",
+            "label": [
+                "sms",
+                "http"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00165.json",
+            "crime": "Get SMS message body and send it through http",
+            "label": [
+                "sms",
+                "http"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00166.json",
+            "crime": "Get SMS message body and retrieve a string from it (possibly PIN / mTAN)",
+            "label": [
+                "sms",
+                "pin"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00167.json",
+            "crime": "Use accessibility service to perform action getting root in active window",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00168.json",
+            "crime": "Use accessibility service to perform global action getting node info by text",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00169.json",
+            "crime": "Use accessibility service to perform global action getting node info by View Id",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00170.json",
+            "crime": "Get installed applications and put the list in shared preferences",
+            "label": [
+                "applications",
+                "privacy"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00171.json",
+            "crime": "Compare network operator with a string",
+            "label": [
+                "network"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/String;",
+                    "method": "equals",
+                    "descriptor": "(Ljava/lang/Object;)Z"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00172.json",
+            "crime": "Check Admin permissions to (probably) get them",
+            "label": [
+                "admin"
+            ],
+            "score": 1,
+            "weight": 0,
+            "confidence": "0%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00173.json",
+            "crime": "Get bounds in screen of an AccessibilityNodeInfo and perform action",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00174.json",
+            "crime": "Get all accounts by type and put them in a JSON object",
+            "label": [
+                "accounts",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00175.json",
+            "crime": "Get notification manager and cancel notifications ",
+            "label": [
+                "notification"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Context;",
+                    "method": "getSystemService",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00176.json",
+            "crime": "Send sms to a contact of contact list",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [
+                "android.permission.SEND_SMS",
+                "android.permission.READ_CONTACTS"
+            ],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00177.json",
+            "crime": "Check if permission is granted and request it",
+            "label": [
+                "permission"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00178.json",
+            "crime": "Execute Linux commands via ProcessBuilder",
+            "label": [
+                "command"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00179.json",
+            "crime": "Send Location via SMS",
+            "label": [
+                "location",
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0,
+            "confidence": "0%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00180.json",
+            "crime": "Load native libraries(.so) via System.loadLibrary (60% means caught)",
+            "label": [
+                "so"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00181.json",
+            "crime": "Load native libraries(.so) via System.load (60% means caught)",
+            "label": [
+                "so"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00182.json",
+            "crime": "Open camera.",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Object;",
+                    "method": "<init>",
+                    "descriptor": "()V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00183.json",
+            "crime": "Get current camera paremeters and change the setting.",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00184.json",
+            "crime": "Set camera preview texture",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Object;",
+                    "method": "<init>",
+                    "descriptor": "()V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00185.json",
+            "crime": "Start capturing camera preview frames to the screen",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Object;",
+                    "method": "<init>",
+                    "descriptor": "()V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00186.json",
+            "crime": "Control camera to take picture",
+            "label": [
+                "camera"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/Object;",
+                    "method": "<init>",
+                    "descriptor": "()V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00187.json",
+            "crime": "Query a URI and check the result",
+            "label": [
+                "collection",
+                "sms",
+                "calllog",
+                "calendar"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00188.json",
+            "crime": "Get the address of a SMS message",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00189.json",
+            "crime": "Get the content of a SMS message",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00190.json",
+            "crime": "Query a URI and append the result into a string",
+            "label": [
+                "collection",
+                "sms",
+                "calllog",
+                "calendar"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/lang/StringBuilder;",
+                    "method": "append",
+                    "descriptor": "(Ljava/lang/String;)Ljava/lang/StringBuilder;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00191.json",
+            "crime": "Get messages in the SMS inbox",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00192.json",
+            "crime": "Get messages in the SMS inbox",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00193.json",
+            "crime": "Send a SMS message",
+            "label": [
+                "sms"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00194.json",
+            "crime": "Set the audio source (MIC) and recorded file format",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00195.json",
+            "crime": "Set the output path of the recorded file",
+            "label": [
+                "record",
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Ljava/io/File;",
+                    "method": "getAbsolutePath",
+                    "descriptor": "()Ljava/lang/String;"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00196.json",
+            "crime": "Set the recorded file format and output path",
+            "label": [
+                "record",
+                "file"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00197.json",
+            "crime": "Set the audio encoder and initialize the recorder",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00198.json",
+            "crime": "Initialize the recorder and start recording",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00199.json",
+            "crime": "Stop recording and release recording resources",
+            "label": [
+                "record"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00200.json",
+            "crime": "Query data from the contact list",
+            "label": [
+                "collection",
+                "contact"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00201.json",
+            "crime": "Query data from the call log",
+            "label": [
+                "collection",
+                "calllog"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00202.json",
+            "crime": "Make a phone call",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.125,
+            "confidence": "40%",
+            "permissions": [],
+            "native_api": [
+                {
+                    "class": "Landroid/content/Intent;",
+                    "method": "<init>",
+                    "descriptor": "(Ljava/lang/String;)V"
+                }
+            ],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00203.json",
+            "crime": "Put a phone number into an intent",
+            "label": [
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00204.json",
+            "crime": "Get the default ringtone",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00205.json",
+            "crime": "Simulate a touch gesture on the device screen",
+            "label": [
+                "accessibility service",
+                "control"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00206.json",
+            "crime": "Check if the text of the view contains the given string",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00207.json",
+            "crime": "Check if the resource name of the view contains the given string",
+            "label": [
+                "accessibility service"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00208.json",
+            "crime": "Capture the contents of the device screen",
+            "label": [
+                "collection",
+                "screen"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00209.json",
+            "crime": "Get pixels from the latest rendered image",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00210.json",
+            "crime": "Copy pixels from the latest rendered image into a Bitmap",
+            "label": [
+                "collection"
+            ],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        },
+        {
+            "rule": "00211.json",
+            "crime": "Open an URL in Wevbiew",
+            "label": [],
+            "score": 1,
+            "weight": 0.0625,
+            "confidence": "20%",
+            "permissions": [],
+            "native_api": [],
+            "combination": [],
+            "sequence": [],
+            "register": []
+        }
+    ]
+}

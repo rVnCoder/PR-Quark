@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Run Command</title>
+    <style>
+        #disbut{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <form  method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" placeholder="Choose File">
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        document.querySelector('#RunBut').addEventListener('click', function(){
+            var element = document.querySelector('#disbut');
+            setTimeout(function(){
+                element.style.display = 'block';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

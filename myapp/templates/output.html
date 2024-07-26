@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .json-container {
+            margin: 20px;
+            width: calc(100% - 40px);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .nested-table {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <a id="disbut" href="http://127.0.0.1:8000/media/test.html">Report</a>
+    <div id="json-container" class="json-container"></div>
+
+    <script>
+        // Path to the JSON file
+        const jsonFilePath = '../media/test.json';
+
+        // Fetch the JSON data and display it
+        fetch(jsonFilePath)
+            .then(response => response.json())
+            .then(data => {
+                displayJsonData(data);
+            })
+            .catch(error => console.error('Error fetching JSON data:', error));
+
+        function displayJsonData(data, container = document.getElementById('json-container')) {
+            const table = document.createElement('table');
+            container.appendChild(table);
+            const tbody = document.createElement('tbody');
+            table.appendChild(tbody);
+
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    const value = data[key];
+                    const row = document.createElement('tr');
+
+                    const keyCell = document.createElement('td');
+                    keyCell.textContent = key;
+                    row.appendChild(keyCell);
+
+                    const valueCell = document.createElement('td');
+                    if (typeof value === 'object' && !Array.isArray(value)) {
+                        const nestedContainer = document.createElement('div');
+                        nestedContainer.classList.add('nested-table');
+                        valueCell.appendChild(nestedContainer);
+                        displayJsonData(value, nestedContainer);
+                    } else if (Array.isArray(value)) {
+                        const nestedTable = document.createElement('table');
+                        nestedTable.classList.add('nested-table');
+                        valueCell.appendChild(nestedTable);
+                        value.forEach((item, index) => {
+                            const nestedRow = document.createElement('tr');
+                            const nestedKeyCell = document.createElement('td');
+                            nestedKeyCell.textContent = `Item ${index + 1}`;
+                            nestedRow.appendChild(nestedKeyCell);
+                            const nestedValueCell = document.createElement('td');
+                            if (typeof item === 'object') {
+                                const nestedContainer = document.createElement('div');
+                                nestedContainer.classList.add('nested-table');
+                                nestedValueCell.appendChild(nestedContainer);
+                                displayJsonData(item, nestedContainer);
+                            } else {
+                                nestedValueCell.textContent = item;
+                            }
+                            nestedRow.appendChild(nestedValueCell);
+                            nestedTable.appendChild(nestedRow);
+                        });
+                    } else {
+                        valueCell.textContent = value;
+                    }
+                    row.appendChild(valueCell);
+                    tbody.appendChild(row);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
